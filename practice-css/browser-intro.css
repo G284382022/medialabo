@@ -33,7 +33,7 @@ div#zentai > div {
 	background-color: #ffefaf;
 }
 
-img.sign {
+img {
     float: right;   /* 画像を右に浮かせる */
 
     width: 100px;
