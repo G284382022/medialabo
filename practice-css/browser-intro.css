@@ -8,8 +8,8 @@ p.info {
 }
 
 h1 {
-	background-color: #7f7fcf;
-	text-shadow: navy;
+	color: white;
+	text-shadow: navy 1px 0 10px;
 	
 }
 
