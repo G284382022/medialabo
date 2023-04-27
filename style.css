@@ -1,4 +1,10 @@
 h1 {
     color: yellow;
-    background-color: blueviolet ;
+    width: 500px;
+    border: solid gold;
+    background-color: fuchsia ;
+}
+h2 {
+    color: gold;
+    text-shadow:  1px 1px black;
 }
