@@ -200,4 +200,4 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-console.log(property.name);
+console.log(sub_genre.name);
