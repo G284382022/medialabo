@@ -20,7 +20,9 @@ function hantei() {
   kaisu=kaisu+1;
   // 課題3-1: 正解判定する
   console.log(kaisu+"回目の予想: "+yoso);
-  if(kaisu>3){
+  if(kaisu>1&&yoso===kotae){
+    console.log("答えは "+kotae+" でした．すでにゲームは終わっています");
+  }else if(kaisu>3){
     console.log("答えは "+kotae+" でした．すでにゲームは終わっています");
   }else if(yoso===kotae){
         console.log("正解です．おめでとう!");
