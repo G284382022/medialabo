@@ -200,4 +200,4 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-console.log(date.result.shop.sub_genre.name);
+console.log(data.results.shop.name);
