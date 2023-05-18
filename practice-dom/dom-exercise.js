@@ -33,7 +33,14 @@ for (let student of students) {
 
 // 練習4-4 箇条書き削除プログラム
 let ww = document.querySelectorAll('ul#location>li');
-ww.remove();
+for(let a of ww ){
+	a.remove();
+	}
 
 // 練習4-5 箇条書き追加プログラム
-
+let lo=document.querySelector('ul#location');
+for(let aa of data){
+	let li =document.createElement('li');
+    li.textContent=aa.name+' ... 緯度:'+aa.lat+', 経度:'+aa.lng;
+    lo.insertAdjacentElement('beforeend',li);
+}
