@@ -198,6 +198,8 @@ let data = {
     ]
   }
 };
-
+let aa=document.querySelector('p#name');
 /////////// 課題3-2 ここからプログラムを書こう
-console.log(data.results.shop.name);
+for(let n of data.results.shop){
+aa.textContent=n.sub_genre.name;
+}  
