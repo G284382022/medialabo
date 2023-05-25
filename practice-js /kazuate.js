@@ -9,7 +9,15 @@ let kaisu = 0;
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
 
-hantei();
+let b1=document.querySelector('#kaito');
+b1.addEventListener('click',greeting)
+
+function greeting() {
+	let i = document.querySelector('input[name="seisu"]');
+	let seisu = i.value;
+	console.log('こんにちは! ' + seisu + ' さん');
+}
+
 
 let kk=document.querySelector('span#kaisu');
 let aa=document.querySelector('span#answer');
