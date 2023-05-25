@@ -198,8 +198,13 @@ let data = {
     ]
   }
 };
+
+let b1=document.querySelector('#kensaku');
+b1.addEventListener('click',namae );
+function namae(){
 let aa=document.querySelector('p#name');
 /////////// 課題3-2 ここからプログラムを書こう
 for(let n of data.results.shop){
-aa.textContent=n.sub_genre.name;
-}  
+aa.textContent=n.name;
+}
+}

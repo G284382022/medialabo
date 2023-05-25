@@ -10,50 +10,46 @@ let kaisu = 0;
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
 
 let b1=document.querySelector('#kaito');
-b1.addEventListener('click',greeting)
+b1.addEventListener('click', hantei);
 
-function greeting() {
-	let i = document.querySelector('input[name="seisu"]');
-	let seisu = i.value;
-	console.log('こんにちは! ' + seisu + ' さん');
-}
-
+// ボタンを押した後の処理をする関数 hantei() の定義
+function hantei() {
+  // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
+  let yoso = document.querySelector('input[name="seisu"]');
+  let seisu2 =yoso.value;
+  let seisu3=Math.floor(seisu2);
+  kaisu=kaisu+1;
+  // 課題3-1: 正解判定する
 
 let kk=document.querySelector('span#kaisu');
 let aa=document.querySelector('span#answer');
 let pi=document.querySelector('p#result');
 kk.textContent=kaisu;
-
-if(kaisu>1&&answer===kotae){
-  pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
-}else if(kaisu>3){
-  pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
-}else if(answer===kotae){
+aa.textContent=seisu2;
+if(kaisu<3){
+  if(seisu3===kotae){
+    if(kaisu>=2){
+      pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
+    }else{
     pi.textContent="正解です．おめでとう!";
-}else if(answer<kotae){
-    pi.textContent="まちがい．答えはもっと大きいですよ";
-}else{
-    pi.textContent="まちがい．答えはもっと小さいですよ";
-}
-// ボタンを押した後の処理をする関数 hantei() の定義
-function hantei() {
-  // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let yoso = 4;
-  kaisu=kaisu+1;
-  // 課題3-1: 正解判定する
-  
-  if(kaisu>1&&yoso===kotae){
-    console.log("答えは "+kotae+" でした．すでにゲームは終わっています");
-  }else if(kaisu>3){
-    console.log("答えは "+kotae+" でした．すでにゲームは終わっています");
-  }else if(yoso===kotae){
-        console.log("正解です．おめでとう!");
-  }else if(yoso<kotae){
-        console.log("まちがい．答えはもっと大きいですよ");
+    }
+  }else if(seisu3<kotae){
+      pi.textContent="まちがい．答えはもっと大きいですよ";
   }else{
-        console.log("まちがい．答えはもっと小さいですよ");
+      pi.textContent="まちがい．答えはもっと小さいですよ";
   }
-  
+}else if(kaisu===3){
+  if(seisu3===kotae){
+    pi.textContent="正解です．おめでとう!";
+  }else if(seisu3<kotae){
+    pi.textContent="まちがい．答えはもっと大きいですよ";
+  }else if(seisu3>kotae){
+    pi.textContent="まちがい．答えはもっと小さいですよ";
+  }else{
+    pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
+  }
+}
+
   // kotae と yoso が一致するかどうか調べて結果を出力
 
   // 課題3-1における出力先はコンソール
