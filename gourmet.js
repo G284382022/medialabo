@@ -202,9 +202,38 @@ let data = {
 let b1=document.querySelector('#kensaku');
 b1.addEventListener('click',namae );
 function namae(){
-let aa=document.querySelector('p#name');
+  
+  //for(let n of data.results.shop){
+    //aa.textContent=n.name;
+  //}
+ 
+  let url= 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
+  
+  axios.get(url)
+        .then(showResult)   
+        .catch(showError)   
+        .then(finish);
 /////////// 課題3-2 ここからプログラムを書こう
-for(let n of data.results.shop){
-aa.textContent=n.name;
+
 }
+function showResult(resp) {
+  
+  let data = resp.data;
+
+  
+  if (typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+
+  console.log(data);
+
+  console.log(data.x);
+}
+
+function showError(err) {
+  console.log(err);
+}
+
+function finish() {
+  console.log('Ajax 通信が終わりました');
 }

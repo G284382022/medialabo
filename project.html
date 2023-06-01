@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>グルメ情報</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
    <script src="gourmet.js" defer></script>
   </head>
   <body>
     <p id="name"></p>
     <label for="zyanru">ジャンル</label>
-    <input type="text" name="zyanru" size="10">
+    <select name="santaro" id="santaro">
+      <option value="">三太郎の一人を選んでください</option>
+      <option value="momo">桃太郎</option>
+      <option value="kin">金太郎</option>
+      <option value="urashima">浦島太郎</option>
+  </select>
     <button id="kensaku">検索</button>
   </body>
 </html>
