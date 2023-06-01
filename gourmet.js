@@ -203,11 +203,28 @@ let b1=document.querySelector('#kensaku');
 b1.addEventListener('click',namae );
 function namae(){
   
+  let s = document.querySelector('select#santaro');
+    let idx = s.selectedIndex;  
+
+    let os = s.querySelectorAll('option');
+    let o = os.item(idx);       
+
+    console.log('選択された ' + idx + ' 番目の option の情報:');
+    console.log('  value=' + o.getAttribute('value'));  
+    console.log('  textContent='+o.textContent);
+
+
+
   //for(let n of data.results.shop){
     //aa.textContent=n.name;
   //}
  
-  let url= 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
+  let url;
+  if(idx<10){
+     url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G00'+idx+'.json';
+  }else{
+     url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0'+idx+'.json';
+  }
   
   axios.get(url)
         .then(showResult)   
@@ -218,16 +235,24 @@ function namae(){
 }
 function showResult(resp) {
   
-  let data = resp.data;
-
-  
-  if (typeof data === 'string') {
-      data = JSON.parse(data);
+  let da1 =resp.data;
+  if (typeof da1 === 'string') {
+    da1 = JSON.parse(da1);
   }
+  let da2=da1.results;
+  let da3=da2.shop;
+  
+  console.log(da1);
+  console.log(da2)
+  console.log(da3);
 
-  console.log(data);
-
-  console.log(data.x);
+  let a=document.querySelector('p#haru')  
+  for(let n of da3){
+    a.textContent="アクセス情報:  "+n.access;
+    b.textContent="住所"+n.address;
+    c.textContent="予算"+n.budget.name;
+    d.textContent="キャッチコピー"+n.catch;
+  } 
 }
 
 function showError(err) {
