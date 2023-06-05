@@ -28,29 +28,26 @@ kk.textContent=kaisu;
 aa.textContent=seisu2;
 if(kaisu<3){
   if(seisu3===kotae){
-    if(kaisu>=2){
-      pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
-    }else{
-    pi.textContent="正解です．おめでとう!";
-    }
-  }else if(seisu3<kotae){
+      pi.textContent="正解です．おめでとう!";
+      kaisu=3;
+    }else {
+      if(seisu3<kotae){
       pi.textContent="まちがい．答えはもっと大きいですよ";
-  }else{
+      }else{
       pi.textContent="まちがい．答えはもっと小さいですよ";
-  }
+      }
+    }
 }else if(kaisu===3){
   if(seisu3===kotae){
     pi.textContent="正解です．おめでとう!";
-  }else if(seisu3<kotae){
-    pi.textContent="まちがい．答えはもっと大きいですよ";
-  }else if(seisu3>kotae){
-    pi.textContent="まちがい．答えはもっと小さいですよ";
-  }else{
-    pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
+  }else {
+    pi.textContent="残念でした、答えは"+kotae+"でした";
   }
+}else{
+    pi.textContent="答えは "+kotae+" でした．すでにゲームは終わっています";
+}
 }
 
   // kotae と yoso が一致するかどうか調べて結果を出力
 
   // 課題3-1における出力先はコンソール
-}
