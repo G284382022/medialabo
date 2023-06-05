@@ -249,25 +249,23 @@ function showResult(resp) {
   console.log(da2)
   console.log(da3);
 
-  let a=document.querySelector('p#haru'); 
-  let b=document.querySelector('p#haru1'); 
-  let c=document.querySelector('p#haru2'); 
-  let d=document.querySelector('p#haru3'); 
-  let e=document.querySelector('p#haru4'); 
-  let f=document.querySelector('p#haru5'); 
-  let g=document.querySelector('p#haru6'); 
-  let h=document.querySelector('p#haru7'); 
-  let i=document.querySelector('p#haru8'); 
+  let a=document.querySelector('ul#haru'); 
+  let b=document.querySelector('ul#haru1'); 
+  let c=document.querySelector('ul#haru2'); 
+  let d=document.querySelector('ul#haru3'); 
+  let e=document.querySelector('ul#haru4'); 
+  let f=document.querySelector('ul#haru5'); 
+  let g=document.querySelector('ul#haru6'); 
+  let h=document.querySelector('ul#haru7'); 
   for(let n of da3){
-    a.textContent="アクセス情報:"+n.access;
-    b.textContent="住所:"+n.address;
-    c.textContent="予算:"+n.budget.name;
-    d.textContent="キャッチコピー:"+n.catch;
-    e.textContent="ジャンル:"+n.genre.name;
-    f.textContent="店舗名:"+n.name;
-    g.textContent="営業日時:"+n.open;
-    h.textContent="最寄駅:"+n.station_name;
-    i.textContent="サブジャンルの名前:"+n.subgenre.name;
+    a.textContent=n.name;
+    b.textContent=n.address;
+    c.textContent=n.budget.name;
+    d.textContent=n.catch;
+    e.textContent=n.genre.name;
+    f.textContent=n.access;
+    g.textContent=n.open;
+    h.textContent=n.station_name;
   } 
 }
 

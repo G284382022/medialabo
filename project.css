@@ -4,6 +4,9 @@ html {
 h1{
     color: rgb(116, 21, 240);
     font-style: italic;
-    text-decoration: underline rgb(221, 241, 7);
+    text-decoration: underline rgb(128, 7, 241);
     text-shadow:  1px 1px black;
+}
+h2{
+    border-bottom: 10px dotted darkblue; 
 }

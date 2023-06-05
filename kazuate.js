@@ -29,7 +29,6 @@ aa.textContent=seisu2;
 if(kaisu<3){
   if(seisu3===kotae){
       pi.textContent="正解です．おめでとう!";
-      kaisu=3;
     }else {
       if(seisu3<kotae){
       pi.textContent="まちがい．答えはもっと大きいですよ";
