@@ -1,12 +1,6 @@
 html{
     background-color: rgb(219, 196, 244);
 }
-wwww{
-    display: flex;
-}
-wwww > div{
-    flex: 1;
-}
 p{
     font-family: serif;
     text-align: justify;
